@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --index: calc(1vw + 1vh);
+    --transition-duration: 1.5s;
+    --transition-timing-function: cubic-bezier(0.05, 0.5, 0.015, 1);
+    --logo-size: calc(var(--index) * 7.8);
+  }
+
+  ::selection {
+    @apply bg-[#3b532c] text-white;
+  }
+}
+
+@font-face {
+  font-family: kamerik-3d;
+  src: url(/fonts/kamerik205-heavy.woff2);
+  font-weight: 900;
+}
+@font-face {
+  font-family: merriweather-italic-3d;
+  src: url(/fonts/merriweather-regular-italic.woff2);
+}
+
+body {
+  @apply bg-black text-white;
+  font-family: kamerik-3d;
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.transform-3d {
+  transform-style: preserve-3d;
+}
+
+.hero-text {
+  font-family: merriweather-italic-3d;
+}
+
+.text-shadow {
+  text-shadow: 0 0 15px #709e42;
+}
+
+.btn {
+  font-family: Arial;
+}
+
+.layer-bg {
+  @apply absolute -inset-[5vw] bg-cover bg-center flex items-center justify-center;
+}
+
+.layer-content {
+  @apply absolute -inset-[5vw] flex items-center justify-center;
+}

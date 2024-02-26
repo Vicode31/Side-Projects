@@ -1,0 +1,8 @@
+h1 {
+  font-size: 100px;
+  background: url(colorbg.jpg) 00 / cover no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+}

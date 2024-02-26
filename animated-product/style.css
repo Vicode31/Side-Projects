@@ -1,0 +1,104 @@
+/* author: https://codepen.io/Prakash286/pen/XWPaLLG
+Prakash */
+@import url("https://fonts.googleapis.com/css?family=Knewave|Raleway:500");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anta&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("space2.jpg");
+}
+
+.main {
+  width: 500px;
+  height: 300px;
+  box-sizing: border-box;
+  padding: 3em;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main::before,
+.main::after {
+  content: "";
+  width: 0;
+  height: 0;
+  box-sizing: inherit;
+  margin-top: 30px;
+  margin-bottom: -30px;
+  border: 3px solid transparent;
+  position: absolute;
+}
+
+.main::before {
+  top: 0;
+  left: 0;
+}
+
+.main::after {
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.main:hover::before {
+  width: 130%;
+  height: 130%;
+}
+
+.main:hover::before {
+  border-top-color: white;
+  border-right-color: white;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.product__image {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  width: 30rem;
+}
+
+.container {
+  width: 200%;
+  height: 200px;
+  margin-top: 20px;
+}
+
+.title {
+  font-family: "Anta";
+  font-size: 40px;
+  color: white;
+  margin-bottom: 50px;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: all 1s;
+  z-index: 9;
+}
+.title > span {
+  font-size: 18px;
+  font-weight: 700;
+  display: block;
+  color: white;
+}
+.desc {
+  width: 160px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  color: white;
+  left: 0;
+  bottom: 2rem;
+  line-height: 1.8;
+  position: relative;
+  transition: all 1s;
+}
+.main:hover .container .title,
+.main:hover .container .desc {
+  left: 40%;
+}

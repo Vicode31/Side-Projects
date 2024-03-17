@@ -1,0 +1,68 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ede4cc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.maincontainer {
+  width: 302px;
+  height: 299px;
+  margin: 10px;
+}
+
+img {
+  border-radius: 10px;
+  object-fit: cover;
+  width: 302px;
+  height: 299px;
+}
+
+.back h2 {
+  margin: auto;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.back p {
+  position: absolute;
+  top: 50px;
+  font-size: 15px;
+  margin: 30px;
+}
+
+/* style the maincontainer class with all child div's of class .front */
+.maincontainer > .front {
+  position: absolute;
+  transform: perspective(600px) rotateY(0deg);
+
+  width: 302px;
+  height: 290px;
+
+  backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+  transition: transform 0.5s linear 0s;
+}
+
+/* style the maincontainer class with all child div's of class .back */
+.maincontainer > .back {
+  position: absolute;
+  transform: perspective(600px) rotateY(180deg);
+  background: #262626;
+  color: #fff;
+  width: 302px;
+  height: 290px;
+  border-radius: 10px;
+  padding: 5px;
+  backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+  transition: transform 0.5s linear 0s;
+}
+
+.maincontainer:hover > .front {
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+.maincontainer:hover > .back {
+  transform: perspective(600px) rotateY(0deg);
+}

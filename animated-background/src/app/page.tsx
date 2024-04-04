@@ -1,16 +1,17 @@
-import styles from "./page.module.css";
+import Background from "./components/background";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.contents}>
-        <h1 className="text-center">home page</h1>
-        <div className={styles.buttons}>
-          <button>notre travail</button>
-          <button>notre histoire</button>
-        </div>
-      </div>
-      <video src="/video.mp4" autoPlay muted loop className={styles.video} />
+    <main className="flex justify-center items-center flex-col">
+      <Background />
+      <section>
+        {/* <div className=" backdrop-blur-lg rounded-2xl shadow-lg p-12 mt-72 text-center">
+          <h1 className="text-white text-7xl">Arrière-plan animé</h1>
+          <p className="text-5xl mt-8">
+            Pour ajouter un côté dynamique à votre site
+          </p>
+        </div> */}
+      </section>
     </main>
   );
 }

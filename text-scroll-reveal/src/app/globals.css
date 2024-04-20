@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Main";
+  src: url("/PPPangaia-Bold.otf");
+}
+
+body {
+  font-family: "Main";
+  background-color: rgb(226, 226, 226);
+}

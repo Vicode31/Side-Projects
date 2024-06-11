@@ -1,3 +1,4 @@
+import ButtonHome from "@/components/button-home";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -69,6 +70,7 @@ export default function Home() {
             </Button>
           </div>
         </CardContent>
+        <ButtonHome />
       </Card>
     </main>
   );
